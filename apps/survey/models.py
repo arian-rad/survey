@@ -44,8 +44,12 @@ class Question(models.Model):
 
 class Answer(models.Model):
     answer = models.PositiveSmallIntegerField(verbose_name=_("Answer"))
-    question = models.ForeignKey(Question, verbose_name=_("Question"), on_delete=models.CASCADE)
-    person = models.ForeignKey(Person, verbose_name=_("person"), on_delete=models.CASCADE)
+    question = models.ForeignKey(
+        Question, verbose_name=_("Question"), on_delete=models.CASCADE
+    )
+    person = models.ForeignKey(
+        Person, verbose_name=_("person"), on_delete=models.CASCADE
+    )
 
     def __str__(self):
         return f"{self.answer}, {self.question}"
