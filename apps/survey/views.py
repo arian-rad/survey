@@ -18,7 +18,7 @@ class SurveyViewSet(viewsets.ModelViewSet):
     queryset = Survey.objects.all()
 
 
-class QuestionViewSet(viewsets.ModelViewSet):
+class QuestionViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = QuestionSerializer
     queryset = Question.objects.all()
 

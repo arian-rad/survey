@@ -4,7 +4,7 @@ from django.utils.translation import gettext as _
 
 class LocationTypeChoices(models.TextChoices):
     COUNTRY = "country", _("country")
-    City = "city", _("city")
+    CITY = "city", _("city")
 
 
 class Location(models.Model):

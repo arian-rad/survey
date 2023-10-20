@@ -6,3 +6,4 @@ class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
         fields = "__all__"
+        depth = 2
