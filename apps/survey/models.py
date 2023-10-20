@@ -36,6 +36,7 @@ class Question(models.Model):
     survey = models.ForeignKey(
         Survey, verbose_name=_("Survey"), on_delete=models.CASCADE
     )
+    # can add priority
 
     def __str__(self):
         return self.text[:15]
